@@ -1,13 +1,13 @@
 # Translation bundle web service 
 
-#TODO#
+# TODO
 Explain what it does ... and why
 
 Swagger documentation
 
 Fix cors headers
 
-#How to run it
+# How to run it
 To run the example, cd to the directory that contains this file then type the following in the command line:
 
 ```bash
