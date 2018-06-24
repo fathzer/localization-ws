@@ -20,6 +20,10 @@ public class URLMessageBuilderTest {
 		ba = URLMessageBuilder.parseURL("http://example.com/toto////");
 		assertEquals("http://example.com/", ba.getUrl().toString());
 		assertEquals("toto", ba.getName());
+
+		ba = URLMessageBuilder.parseURL("http://example.com:8080/message");
+		assertEquals("http://example.com:8080/", ba.getUrl().toString());
+		assertEquals("message", ba.getName());
 	}
 	
 	@Test (expected=IllegalArgumentException.class)

@@ -1,9 +1,9 @@
 # Translation bundle web service 
 
 # TODO
-Explain what it does ... and why in a decent Swagger documentation
-
-Fix cors headers
+* Explain what it does ... and why in a decent Swagger documentation
+* Fix cors headers
+* Fix error 500 when url is wrong or refers to a missing resource
 
 # How to run it
 To run the example, cd to the directory that contains this file then type the following in the command line:

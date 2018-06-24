@@ -19,6 +19,8 @@ public class ProxyConfig {
 			log.info("Setting proxy to {}:{} ...", proxyHost, proxyPort);
 			System.setProperty("https.proxyHost", proxyHost);
 			System.setProperty("https.proxyPort", proxyPort);
+			System.setProperty("http.proxyHost", proxyHost);
+			System.setProperty("http.proxyPort", proxyPort);
 			
 			String proxyUser = System.getenv("PROXY_USER");
 			if (proxyUser!=null) {
