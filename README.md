@@ -3,13 +3,16 @@
 # TODO
 * Explain what it does ... and why in a decent Swagger documentation
 * Fix cors headers
-* Build docker image
 
 # How to run it
 To run the example, cd to the directory that contains this file then type the following in the command line:
 
 ```bash
 mvn spring-boot:run
+```
+# How to build the Docker image
+```bash
+mvn package dockerfile:build
 ```
 
 In your preferred browser enter the url [http://127.0.0.1:8080/swagger-ui.html#/](http://127.0.0.1:8080/swagger-ui.html#/) to display the services documentation
