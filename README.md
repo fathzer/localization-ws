@@ -3,7 +3,7 @@
 # TODO
 * Explain what it does ... and why in a decent Swagger documentation
 * Fix cors headers
-* Fix error 500 when url is wrong or refers to a missing resource
+* Build docker image
 
 # How to run it
 To run the example, cd to the directory that contains this file then type the following in the command line:

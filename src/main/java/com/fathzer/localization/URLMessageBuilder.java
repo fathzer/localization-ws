@@ -26,6 +26,12 @@ public class URLMessageBuilder {
 		private String name;
 	}
 
+	/** Parses a URL String into a BundleAddress instance.
+	 * <br>The url should have the format: <b>host[:port]/[path/]/resourceName</b>
+	 * @param urlStr The url
+	 * @return A BundleAddress
+	 * @throws IllegalArgumentException is wrong (for example if url has no bundle name)
+	 */
 	public static BundleAddress parseURL(String urlStr) {
 		while (urlStr.endsWith("/")) {
 			urlStr = urlStr.substring(0, urlStr.length()-1);
@@ -44,6 +50,13 @@ public class URLMessageBuilder {
 		}
 	}
 
+	/** Gets some values of a resource bundle.
+	 * @param bundleAddress A resource bundle address
+	 * @param locale A locale
+	 * @param ids The list of ids we want to get the value 
+	 * @return A map with ids as key and their values in the bundle as values. If an id is unknown, its value will be null.
+	 * @throws MissingResourceException if the resourceBundle was not found.
+	 */
 	public static Map<String, String> getMessages(BundleAddress bundleAddress, Locale locale, Iterable<String> ids) {
 		Map<String, String> result = new HashMap<>();
 		ResourceBundle rb = getBundle(bundleAddress, locale);
@@ -57,6 +70,12 @@ public class URLMessageBuilder {
 		return result;
 	}
 
+	/** Gets all values of a resource bundle.
+	 * @param bundleAddress A resource bundle address
+	 * @param locale A locale
+	 * @return A map containing all the id/value pairs if the resource bundle.
+	 * @throws MissingResourceException if the resourceBundle was not found.
+	 */
 	public static Map<String, String> getMessages(BundleAddress bundleAddress, Locale locale) {
 		Map<String, String> result = new HashMap<>();
 		ResourceBundle rb = getBundle(bundleAddress, locale);
