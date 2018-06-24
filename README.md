@@ -17,7 +17,7 @@ mvn package dockerfile:build
 In your preferred browser enter the url [http://127.0.0.1:8080/swagger-ui.html#/](http://127.0.0.1:8080/swagger-ui.html#/) to display the services documentation
 
 # Setting CORS
-By default, CORS if activated for all origins, you can use the CORS_ORIGINS environment variable to change this behavior.
+By default, CORS is activated for all origins, you can use the CORS_ORIGINS environment variable to change this behavior.
 1. Set it to an empty string to disable CORS
 2. Set it to a comma separated list of domains to restrict access to these origins (example:"http://domain1.com,http://domain2.com") 
 
