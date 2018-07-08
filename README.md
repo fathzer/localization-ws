@@ -1,7 +1,6 @@
 # Translation bundle web service 
 
 # TODO
-* Write something in the log if bundle location is wrong
 * Explain what it does ... and why in a decent Swagger documentation
 
 # How to run it

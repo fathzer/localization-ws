@@ -1,6 +1,7 @@
 package com.fathzer.localization;
 
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Enumeration;
@@ -48,6 +49,11 @@ public class URLMessageBuilder {
 		} catch (MalformedURLException e) {
 			throw new IllegalArgumentException(e);
 		}
+	}
+	
+	public static BundleAddress parseURL(URI uri) {
+		System.out.println(uri.getFragment());
+		return null;
 	}
 
 	/** Gets some values of a resource bundle.

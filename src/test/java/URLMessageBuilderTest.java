@@ -35,4 +35,9 @@ public class URLMessageBuilderTest {
 	public void testWrongProtocol() {
 		URLMessageBuilder.parseURL("xxx://example.com/titi");
 	}
+
+	@Test (expected=IllegalArgumentException.class)
+	public void testJustABundleName() {
+		URLMessageBuilder.parseURL("messages");
+	}
 }

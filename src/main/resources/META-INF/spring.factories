@@ -1,0 +1,2 @@
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+  com.fathzer.localization.ws.error.CustomFailureAnalyzer
