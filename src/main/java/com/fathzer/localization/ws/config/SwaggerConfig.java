@@ -21,10 +21,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 	// Get the version from the swagger.properties file
-    @Value("${version}")
-    private String version;
+	@Value("${version}")
+	private String version;
 
-    @Bean
+	@Bean
 	public Docket api() {
 		ApiInfo info = new ApiInfo("Resource bundle API","description", version, null, null, null, null, Collections.emptyList());
 		return new Docket(DocumentationType.SWAGGER_2)
